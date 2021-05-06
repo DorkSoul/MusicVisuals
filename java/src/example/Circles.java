@@ -16,13 +16,14 @@ public class Circles {
 
     public void render()
     {
-        
         mv.noStroke();
         
         for(int i = 0 ; i < mv.getBands().length ; i ++)
         {
+            //split color into 9 and map to 255
             mv.fill(PApplet.map(i, 0, mv.getBands().length, 255, 0), 255, 255);
 
+            //split into 3 x 3 grid for circles of the getSmoothedBands
             if(i >= 0 && i <=2)
             {
                 cx = (mv.width/3)/2;
@@ -47,6 +48,7 @@ public class Circles {
                 t++;
             }
         }
+        //reset t for next iteration
         t = 0;
     }
 }

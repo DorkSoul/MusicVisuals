@@ -2,8 +2,10 @@ package example;
 
 import processing.core.PApplet;
 
-
 // This is an example of a visual that renders the waveform
+
+// most unchanged from given example just added lerping
+
 public class WaveForm
 {
     MyVisual mv;

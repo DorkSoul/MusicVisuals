@@ -4,12 +4,12 @@ import ie.tudublin.*;
 
 public class MyVisual extends Visual
 {    
+    // each visual scene
     WaveForm wf;
-    AudioBandsVisual abv;
     Circles cir;
     Squares squ;
     TurnAngle tur;
-    RandBand rb;
+    ColorBand cb;
 
     int which = 0;
 
@@ -29,18 +29,22 @@ public class MyVisual extends Visual
         startMinim();
                 
         // Call loadAudio to load an audio file to process 
-        loadAudio("Shatter Me.mp3");   
+        //uncomment to select song
+
+        //loadAudio("heroplanet.mp3");
+        loadAudio("Mi Mi Mi.mp3"); 
+        //loadAudio("Shatter Me.mp3"); 
+        //loadAudio("Dont Stop Me Now.mp3");    
 
         
         // Call this instead to read audio from the microphone
         //startListening(); 
         
         wf = new WaveForm(this);
-        abv = new AudioBandsVisual(this);
         cir = new Circles(this);
         squ = new Squares(this);
         tur = new TurnAngle(this);
-        rb = new RandBand(this);
+        cb = new ColorBand(this);
     }
 
     public void keyPressed()
@@ -51,6 +55,7 @@ public class MyVisual extends Visual
             getAudioPlayer().play();
         }
 
+        // 0 is default timed 60 second swap. click 1-5 for manual selection.
         if (keyCode == '0') {
             which = keyCode - '0';
         }
@@ -70,10 +75,17 @@ public class MyVisual extends Visual
         if (keyCode == '4') {
             which = keyCode - '0';
         }
+
+        if (keyCode == '5') {
+            which = keyCode - '0';
+        }
     }
 
     public void draw()
     {
+        //used to count seconds to alow for auto swap
+        int m = millis()/1000;
+
         background(0);
         try
         {
@@ -90,33 +102,57 @@ public class MyVisual extends Visual
         // Call this is you want to get the average amplitude
         calculateAverageAmplitude();        
        
-        
-
         switch (which)
-        {
+        {  
             case 0:
             {
-                wf.render();   
+                //Scene will swap every 60 seconds
+                
+                if(m <= 60){
+                    wf.render();
+                }
+
+                if(m > 60 && m <= 120){
+                    cir.render();
+                }
+        
+                if(m > 120 && m <= 180){
+                    squ.render();
+                }
+        
+                if(m > 180 && m <= 240){
+                    tur.render();
+                }
+        
+                if(m > 240){
+                    cb.render();
+                }
+
                 break;
-            }   
+            }
             case 1:
             {
-                cir.render();
+                wf.render();
                 break;
             }
             case 2:
             {
-                squ.render();
+                cir.render();
                 break;
             }
             case 3:
             {
-                tur.render(); 
+                squ.render();
                 break;
             }
             case 4:
             {
-                rb.render();
+                tur.render();
+               break;
+            }
+            case 5:
+            {
+                cb.render();
                break;
             }
         }
