@@ -30,9 +30,9 @@ public class WaveForm
                 , 255
                 , 255
             );
-        
+            
             curr = PApplet.lerp(prev, mv.getAudioBuffer().get(i), 0.1f);
-            mv.line(i+i, cy - cy * curr, i+i, cy + cy * curr);
+            mv.line(i+i, (cy - cy * curr), i+i, (cy + cy * curr));
             prev = curr;
         }
            

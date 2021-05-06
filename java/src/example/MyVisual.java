@@ -9,12 +9,13 @@ public class MyVisual extends Visual
     Circles cir;
     Squares squ;
     TurnAngle tur;
+    RandBand rb;
 
     int which = 0;
 
     public void settings()
     {
-        size(1024, 500);
+        size(1000, 500);
         
         // Use this to make fullscreen
         //fullScreen();
@@ -39,6 +40,7 @@ public class MyVisual extends Visual
         cir = new Circles(this);
         squ = new Squares(this);
         tur = new TurnAngle(this);
+        rb = new RandBand(this);
     }
 
     public void keyPressed()
@@ -99,26 +101,22 @@ public class MyVisual extends Visual
             }   
             case 1:
             {
-                abv.render(); 
+                cir.render();
                 break;
             }
             case 2:
             {
-                cir.render(); 
+                squ.render();
                 break;
             }
             case 3:
             {
-                squ.render(); 
+                tur.render(); 
                 break;
             }
             case 4:
             {
-                tur.render(); 
-               break;
-            }
-            case 5:
-            {
+                rb.render();
                break;
             }
         }
