@@ -25,7 +25,7 @@ Student Number:
 
 # What I am most proud of in the assignment
 
-i would like to say that making the song play the game of life for me would be it, but it ended up too time consuming so was dropped. overall i like scene 5 the most once i got my head around the brightness setting.
+I would like to say that making the song play the game of life for me would be it, but it ended up too time consuming so was dropped. Overall I like scene 5 the most once I got my head around the brightness setting. Works great some some songs and not bad on others.
 
 # Markdown Tutorial
 
