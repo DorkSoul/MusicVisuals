@@ -1,8 +1,8 @@
 # Music Visualiser Project
 
-Name:
+Name: Luke Hallinan
 
-Student Number: 
+Student Number: D20125299
 
 ## Instructions
 - Fork this repository and use it a starter project for your assignment
@@ -24,6 +24,8 @@ Student Number:
 
 # What I am most proud of in the assignment
 I would like to say that making the song play the game of life for me would be it, but it ended up too time consuming so was dropped. Overall I like scene 5 the most once I got my head around the brightness setting. Works great some some songs and not bad on others.
+
+Video link: https://www.youtube.com/watch?v=UmzJca2QJ7I
 
 # Markdown Tutorial
 
