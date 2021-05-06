@@ -1,6 +1,5 @@
 package D20125299;
 
-import example.ColorBand;
 import ie.tudublin.*;
 
 public class MyVisual extends Visual
@@ -34,9 +33,9 @@ public class MyVisual extends Visual
 
         //loadAudio("heroplanet.mp3");
         //loadAudio("Mi Mi Mi.mp3"); 
-        loadAudio("Shatter Me.mp3"); 
-        //loadAudio("Dont Stop Me Now.mp3");    
-
+        //loadAudio("Shatter Me.mp3"); 
+        //loadAudio("Dont Stop Me Now.mp3");
+        loadAudio("My Dark Disquiet.mp3");    
         
         // Call this instead to read audio from the microphone
         //startListening(); 

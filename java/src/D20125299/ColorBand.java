@@ -1,6 +1,5 @@
-package example;
+package D20125299;
 
-import D20125299.MyVisual;
 import processing.core.*;
 
 public class ColorBand {
