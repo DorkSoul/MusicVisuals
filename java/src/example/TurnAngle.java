@@ -46,8 +46,7 @@ public class TurnAngle {
            
             mv.quad(cx + (float)x1, cy + (float)y1, 
                     cx + (float)x2, cy + (float)y2, 
-                    cx, cy, 
-                    cx, cy); 
+                    cx, cy, cx, cy); 
         }
     }
 }
