@@ -7,6 +7,7 @@ public class MyVisual extends Visual
     WaveForm wf;
     AudioBandsVisual abv;
     Circles cir;
+    Squares squ;
 
     int which = 0;
 
@@ -35,6 +36,7 @@ public class MyVisual extends Visual
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
         cir = new Circles(this);
+        squ = new Squares(this);
     }
 
     public void keyPressed()
@@ -54,6 +56,10 @@ public class MyVisual extends Visual
         }
 
         if (keyCode == '2') {
+            which = keyCode - '0';
+        }
+
+        if (keyCode == '3') {
             which = keyCode - '0';
         }
     }
@@ -97,6 +103,7 @@ public class MyVisual extends Visual
             }
             case 3:
             {
+                squ.render(); 
                 break;
             }
             case 4:
