@@ -1,10 +1,10 @@
 package example;
 
+import D20125299.MyVisual;
 import processing.core.*;
 
 // This is an example of a visual that uses the audio bands
 
-// mostly untouched from base example just added lerping
 
 public class AudioBandsVisual
 {
