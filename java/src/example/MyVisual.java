@@ -6,6 +6,9 @@ public class MyVisual extends Visual
 {    
     WaveForm wf;
     AudioBandsVisual abv;
+    Circles cir;
+
+    int which = 0;
 
     public void settings()
     {
@@ -23,14 +26,15 @@ public class MyVisual extends Visual
         startMinim();
                 
         // Call loadAudio to load an audio file to process 
-        //loadAudio("heroplanet.mp3");   
+        loadAudio("Shatter Me.mp3");   
 
         
         // Call this instead to read audio from the microphone
-        startListening(); 
+        //startListening(); 
         
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
+        cir = new Circles(this);
     }
 
     public void keyPressed()
@@ -39,6 +43,18 @@ public class MyVisual extends Visual
         {
             getAudioPlayer().cue(0);
             getAudioPlayer().play();
+        }
+
+        if (keyCode == '0') {
+            which = keyCode - '0';
+        }
+
+        if (keyCode == '1') {
+            which = keyCode - '0';
+        }
+
+        if (keyCode == '2') {
+            which = keyCode - '0';
         }
     }
 
@@ -59,7 +75,38 @@ public class MyVisual extends Visual
 
         // Call this is you want to get the average amplitude
         calculateAverageAmplitude();        
-        wf.render();
-        abv.render();
+       
+        
+
+        switch (which)
+        {
+            case 0:
+            {
+                wf.render();   
+                break;
+            }   
+            case 1:
+            {
+                abv.render(); 
+                break;
+            }
+            case 2:
+            {
+                cir.render(); 
+                break;
+            }
+            case 3:
+            {
+                break;
+            }
+            case 4:
+            {
+               break;
+            }
+            case 5:
+            {
+               break;
+            }
+        }
     }
 }
