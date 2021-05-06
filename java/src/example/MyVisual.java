@@ -8,6 +8,7 @@ public class MyVisual extends Visual
     AudioBandsVisual abv;
     Circles cir;
     Squares squ;
+    TurnAngle tur;
 
     int which = 0;
 
@@ -37,6 +38,7 @@ public class MyVisual extends Visual
         abv = new AudioBandsVisual(this);
         cir = new Circles(this);
         squ = new Squares(this);
+        tur = new TurnAngle(this);
     }
 
     public void keyPressed()
@@ -60,6 +62,10 @@ public class MyVisual extends Visual
         }
 
         if (keyCode == '3') {
+            which = keyCode - '0';
+        }
+
+        if (keyCode == '4') {
             which = keyCode - '0';
         }
     }
@@ -108,6 +114,7 @@ public class MyVisual extends Visual
             }
             case 4:
             {
+                tur.render(); 
                break;
             }
             case 5:
