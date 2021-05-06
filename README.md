@@ -16,8 +16,14 @@ Student Number:
 # Instructions
 
 # How it works
+- 5 songs in the file just uncomment whichever you would like to play.
+- Run main program and click space to begin playing.
+- By default state 0 is selected and scene will swap every 60 seconds.
+- Numbers 1 -5 can be used to manual select scenes (0 returns to the timed scene)
+- Number 5 flashed a lot. If your bad with flaching lights you have been warned.
 
 # What I am most proud of in the assignment
+I would like to say that making the song play the game of life for me would be it, but it ended up too time consuming so was dropped. Overall I like scene 5 the most once I got my head around the brightness setting. Works great some some songs and not bad on others.
 
 # Markdown Tutorial
 
